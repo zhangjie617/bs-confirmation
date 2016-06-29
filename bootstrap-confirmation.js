@@ -53,7 +53,7 @@
 						if($('.popover').has(e.target).length) return;
 
 						that.hide();
-						that.inState.click = false;
+						//that.inState.click = false;
 
 						$('body').unbind(e);
 
@@ -100,7 +100,7 @@
 		template 		:   '<div class="popover"><div class="arrow"></div>'
 							+ '<h3 class="popover-title"></h3>'
 							+ '<div class="popover-content">'
-							+ '<a data-apply="confirmation">Yes</a>'
+							+ '<a data-apply="confirmation">Yes</a> '
 							+ '<a data-dismiss="confirmation">No</a>'
 							+ '</div>'
 							+ '</div>'
@@ -138,7 +138,7 @@
 					that.$element.closest('form').first().submit();
 
 				that.hide();
-				that.inState.click = false;
+				//that.inState.click = false;
 			});
 
 		$btnCancel.addClass(this.getBtnCancelClass())
@@ -148,7 +148,7 @@
 				options.onCancel(event, that.$element);
 
 				that.hide();
-				that.inState.click = false;
+				//that.inState.click = false;
 			});
 
 		$tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title);
